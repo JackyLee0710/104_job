@@ -18,7 +18,7 @@ def get_job_info(url):
 
     r = requests.get(url_request, headers=headers).text
     data = json.loads(r)
-    print(data)
+    # print(data)
 
     # 職稱
     job = data['data']['header']['jobName']

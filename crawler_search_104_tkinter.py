@@ -27,6 +27,7 @@ def get_104_info(search, page_input):
         url = f"https://www.104.com.tw/jobs/search/?ro=0&keyword={search}&page={page}&jobexp=1"
         response = requests.get(url, headers=headers)
         soup = BeautifulSoup(response.text, "html.parser")
+        print(f"第{pages}頁職缺網址：")
 
         job_lists = soup.select("article.b-block--top-bord.job-list-item.b-clearfix.js-job-item")
         for job_list in job_lists:
